@@ -1,0 +1,191 @@
+version: 1.2.1
+cache: true
+
+# MOVED HERE: No indentation before summarization
+summarization:
+  enabled: false
+
+
+endpoints:
+  custom:
+    - name: "UwU"
+      apiKey: "user_provided"
+      baseURL: "${C_BASE_URL}"
+      models:
+        default: 
+          - "claude-3-5-sonnet-20241022"
+        fetch: false
+      titleConvo: false
+      titleModel: "claude-3-5-sonnet-20241022"
+      summarize: false
+      summaryModel: "gpt-3.5-turbo"
+      forcePrompt: false
+      dropParams: ["stop", "user", "frequency_penalty", "presence_penalty"] 
+      modelDisplayLabel: "UwU"
+      iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/main/icons/uwu.png"
+
+    - name: "UwU2"
+      apiKey: "user_provided"
+      baseURL: "${C2_BASE_URL}"
+      models:
+        default: 
+          - "claude-3-5-sonnet-20241022"
+          - "claude-3.5-sonnet"
+          - "anthropic/claude-3.5-sonnet-20241022"
+        fetch: false
+      titleConvo: false
+      titleModel: "claude-3.5-sonnet"
+      summarize: false
+      summaryModel: "gpt-3.5-turbo"
+      forcePrompt: false
+      dropParams: ["stop", "user", "frequency_penalty", "presence_penalty"] 
+      modelDisplayLabel: "UwU2"
+      iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/main/icons/uwu.png"
+
+      
+      
+    - name: "CLAUDE PROXY"
+      apiKey: "user_provided"
+      baseURL: "${PROXY_BASE_URL}"
+      models:
+        default: 
+          - "claude-3-5-sonnet-20241022"
+          - "anthropic/claude-3-opus:beta"
+          - "anthropic/claude-3.5-sonnet:beta"
+      fetch: false
+      titleConvo: false
+      titleModel: "anthropic/claude-3.5-sonnet:beta"
+      summarize: false
+      summaryModel: "anthropic/claude-3.5-sonnet:beta"
+      dropParams: ["stop"]
+      modelDisplayLabel: "CLAUDE"
+
+    - name: "OpenRouter"
+      apiKey: "user_provided"
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default: 
+          - "x-ai/grok-4.3"
+          - "anthropic/claude-opus-4.6"
+          - "qwen/qwen3.5-plus-02-15"
+          - "amazon/nova-premier-v1"
+          - "deepseek/deepseek-r1"
+          - "deepseek/deepseek-chat"
+          - "minimax/minimax-m2.5"
+          - "amazon/nova-pro-v1"
+          - "anthracite-org/magnum-v4-72b"
+          - "google/gemini-3.1-pro-preview"
+          - "gryphe/mythomax-l2-13b"
+          - "inflection/inflection-3-pi"
+          - "anthracite-org/magnum-v2-72b"
+          - "thedrummer/rocinante-12b"
+          
+          
+      fetch: false
+      titleConvo: true
+      titleModel: "gpt-3.5-turbo"
+      summarize: false
+      summaryModel: "gpt-3.5-turbo"
+      forcePrompt: false
+      modelDisplayLabel: "OpenRouter"
+
+    - name: "moonshot"
+      apiKey: "user_provided"
+      baseURL: "${MS_BASE_URL}"
+      models:
+        default: 
+          - "kimi-k2.6"
+      fetch: false
+      titleConvo: false
+      titleModel: "kimi-k2.5"
+      summarize: false
+      summaryModel: "kimi-k2.5"
+      dropParams: ["stop"]
+      modelDisplayLabel: "Moonshot"
+      iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/587297a974faf2e7e06364c2e8aae4f72a75acec/icons/moonshot.jpeg"
+
+    - name: "DeepSeek"
+      apiKey: "user_provided"
+      baseURL: "https://api.deepseek.com/beta"
+      models:
+        default: 
+          - "deepseek-v4-pro"
+          - "deepseek-reasoner"
+      fetch: false
+      titleConvo: false
+      titleModel: "deepseek-chat"
+      summarize: false
+      summaryModel: "deepseek-chat"
+      dropParams: ["stop", "reasoning_effort", "reasoning"]
+      addParams:
+        thinking:
+          type: "disabled"
+      modelDisplayLabel: "DeepSeek"
+
+
+    - name: "Together.ai"
+      apiKey: "user_provided"
+      baseURL: "https://api.together.xyz/v1"
+      models:
+        default: 
+          - "deepseek-ai/DeepSeek-R1"
+      fetch: false
+      titleConvo: false
+      titleModel: "deepseek-ai/DeepSeek-R1"
+      summarize: false
+      summaryModel: "deepseek-ai/DeepSeek-R1"
+      dropParams: ["stop"]
+      modelDisplayLabel: "Together.ai Deepseek R1"
+
+    - name: "Nebius"
+      apiKey: "user_provided"
+      baseURL: "https://api.studio.nebius.ai/v1/"
+      models:
+        default: 
+          - "deepseek-ai/DeepSeek-R1-0528"
+          - "deepseek-ai/DeepSeek-R1"
+          - "deepseek-ai/DeepSeek-V3-0324"
+      fetch: false
+      titleConvo: true
+      titleModel: "deepseek-ai/DeepSeek-R1"
+      summarize: false
+      summaryModel: "deepseek-ai/DeepSeek-R1"
+      dropParams: ["stop"]
+      modelDisplayLabel: "Nebius Deepseek R1"
+      iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/refs/heads/main/icons/nebius2.jpg"
+
+    - name: "GROK"
+      apiKey: "user_provided"
+      baseURL: "https://api.x.ai/v1"
+      models:
+        default: 
+          - "grok-4.3"
+          - "grok-4.20-0309-non-reasoning"
+          - "grok-4.20-0309-reasoning"
+          - "grok-4-1-fast-non-reasoning"
+          - "grok-4-1-fast-reasoning"
+          - "grok-4-0709"
+      fetch: false
+      titleConvo: true
+      titleModel: "grok-4-1-fast-non-reasoning"
+      summarize: false
+      summaryModel: "grok-4-1-fast-non-reasoning"
+      dropParams: ["stop"]
+      modelDisplayLabel: "GROK"
+      iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/refs/heads/main/icons/grok.jpg"
+
+    - name: "Z.AI"
+      apiKey: "user_provided"
+      baseURL: "https://api.z.ai/api/paas/v4"
+      models:
+        default: 
+          - "glm-5.1"
+          - "glm-5"
+          - "glm-4.7"
+      fetch: false
+      titleConvo: true
+      titleModel: "glm-4.7"
+      summarize: false
+      summaryModel: "glm-4.7"
+      dropParams: ["stop"]
+      modelDisplayLabel: "GLM"
