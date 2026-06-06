@@ -66,6 +66,8 @@ endpoints:
       models:
         default: 
           - "x-ai/grok-4.3"
+          - "anthropic/claude-opus-4.8"
+          - "anthropic/claude-opus-4.7"
           - "anthropic/claude-opus-4.6"
           - "qwen/qwen3.5-plus-02-15"
           - "amazon/nova-premier-v1"
