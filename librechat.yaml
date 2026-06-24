@@ -19,6 +19,7 @@ endpoints:
           - "anthropic/claude-opus-4.7"
           - "anthropic/claude-opus-4.8"
           - "z-ai/glm-5.2"
+          - "sakana/fugu-ultra"
           
           
       fetch: false
