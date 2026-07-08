@@ -15,6 +15,8 @@ endpoints:
         default: 
           - "anthropic/claude-fable-5"
           - "x-ai/grok-4.3"
+          - "x-ai/grok-4.5"
+          - "x-ai/grok-latest"
           - "anthropic/claude-opus-4.6"
           - "anthropic/claude-opus-4.7"
           - "anthropic/claude-opus-4.8"
@@ -100,6 +102,7 @@ endpoints:
       baseURL: "https://api.x.ai/v1"
       models:
         default: 
+          - "grok-4.5"
           - "grok-4.3"
           - "grok-4.20-0309-non-reasoning"
           - "grok-4.20-0309-reasoning"
