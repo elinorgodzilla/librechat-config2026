@@ -18,6 +18,8 @@ endpoints:
           - "anthropic/claude-fable-5"
           - "x-ai/grok-4.5"
           - "x-ai/grok-latest"
+          - "meta/muse-spark-1.1"
+          - "moonshotai/kimi-k3"
           - "anthropic/claude-opus-4.6"
           - "anthropic/claude-opus-4.7"
           - "anthropic/claude-opus-4.8"
