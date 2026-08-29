@@ -28,7 +28,7 @@ endpoints:
           - "anthropic/claude-opus-4.6"
           - "anthropic/claude-opus-4.7"
           - "anthropic/claude-opus-4.8"
-          - "z-ai/glm-5.2"
+          - "z-ai/glm-5.3"
           - "sakana/fugu-ultra"
           
           
@@ -45,12 +45,15 @@ endpoints:
       baseURL: "${MS_BASE_URL}"
       models:
         default: 
+          - "kimi-k3"
+          - "kimi-k2.7-code"
+          - "kimi-k2.7-code-highspeed"
           - "kimi-k2.6"
       fetch: false
       titleConvo: false
-      titleModel: "kimi-k2.5"
+      titleModel: "kimi-k3"
       summarize: false
-      summaryModel: "kimi-k2.5"
+      summaryModel: "kimi-k3"
       dropParams: ["stop"]
       modelDisplayLabel: "Moonshot"
       iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/587297a974faf2e7e06364c2e8aae4f72a75acec/icons/moonshot.jpeg"
@@ -74,36 +77,38 @@ endpoints:
       modelDisplayLabel: "DeepSeek"
 
 
-    - name: "Together.ai"
-      apiKey: "user_provided"
-      baseURL: "https://api.together.xyz/v1"
-      models:
-        default: 
-          - "deepseek-ai/DeepSeek-R1"
-      fetch: false
-      titleConvo: false
-      titleModel: "deepseek-ai/DeepSeek-R1"
-      summarize: false
-      summaryModel: "deepseek-ai/DeepSeek-R1"
-      dropParams: ["stop"]
-      modelDisplayLabel: "Together.ai Deepseek R1"
+    # Disabled temporarily: Together.ai
+    # - name: "Together.ai"
+    #   apiKey: "user_provided"
+    #   baseURL: "https://api.together.xyz/v1"
+    #   models:
+    #     default:
+    #       - "deepseek-ai/DeepSeek-R1"
+    #   fetch: false
+    #   titleConvo: false
+    #   titleModel: "deepseek-ai/DeepSeek-R1"
+    #   summarize: false
+    #   summaryModel: "deepseek-ai/DeepSeek-R1"
+    #   dropParams: ["stop"]
+    #   modelDisplayLabel: "Together.ai Deepseek R1"
 
-    - name: "Nebius"
-      apiKey: "user_provided"
-      baseURL: "https://api.studio.nebius.ai/v1/"
-      models:
-        default: 
-          - "deepseek-ai/DeepSeek-R1-0528"
-          - "deepseek-ai/DeepSeek-R1"
-          - "deepseek-ai/DeepSeek-V3-0324"
-      fetch: false
-      titleConvo: true
-      titleModel: "deepseek-ai/DeepSeek-R1"
-      summarize: false
-      summaryModel: "deepseek-ai/DeepSeek-R1"
-      dropParams: ["stop"]
-      modelDisplayLabel: "Nebius Deepseek R1"
-      iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/refs/heads/main/icons/nebius2.jpg"
+    # Disabled temporarily: Nebius
+    # - name: "Nebius"
+    #   apiKey: "user_provided"
+    #   baseURL: "https://api.studio.nebius.ai/v1/"
+    #   models:
+    #     default:
+    #       - "deepseek-ai/DeepSeek-R1-0528"
+    #       - "deepseek-ai/DeepSeek-R1"
+    #       - "deepseek-ai/DeepSeek-V3-0324"
+    #   fetch: false
+    #   titleConvo: true
+    #   titleModel: "deepseek-ai/DeepSeek-R1"
+    #   summarize: false
+    #   summaryModel: "deepseek-ai/DeepSeek-R1"
+    #   dropParams: ["stop"]
+    #   modelDisplayLabel: "Nebius Deepseek R1"
+    #   iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/refs/heads/main/icons/nebius2.jpg"
 
     - name: "GROK"
       apiKey: "user_provided"
@@ -132,13 +137,13 @@ endpoints:
       baseURL: "https://api.z.ai/api/paas/v4"
       models:
         default: 
-          - "glm-5.1"
-          - "glm-5"
-          - "glm-4.7"
+          - "glm-5.3"
+          - "glm-5.3-flash"
+          - "glm-5.2"
       fetch: false
       titleConvo: true
-      titleModel: "glm-4.7"
+      titleModel: "glm-5.3"
       summarize: false
-      summaryModel: "glm-4.7"
+      summaryModel: "glm-5.3"
       dropParams: ["stop"]
       modelDisplayLabel: "GLM"
