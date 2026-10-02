@@ -1,10 +1,8 @@
 version: 1.2.1
 cache: true
 
-# MOVED HERE: No indentation before summarization
 summarization:
   enabled: false
-
 
 endpoints:
   custom:
@@ -12,7 +10,7 @@ endpoints:
       apiKey: "user_provided"
       baseURL: "https://openrouter.ai/api/v1"
       models:
-        default: 
+        default:
           - "aion-labs/aion-3.5"
           - "anthropic/claude-opus-5.5"
           - "openai/gpt-5.6-sol"
@@ -31,30 +29,23 @@ endpoints:
           - "anthropic/claude-opus-4.8"
           - "z-ai/glm-5.3"
           - "sakana/fugu-ultra"
-          
-          
-      fetch: false
+        fetch: false
       titleConvo: true
-      titleModel: "anthropic/claude-sonnet-5"
-      summarize: false
-      summaryModel: "gpt-3.5-turbo"
-      forcePrompt: false
+      titleModel: "current_model"
       modelDisplayLabel: "OpenRouter"
 
     - name: "moonshot"
       apiKey: "user_provided"
       baseURL: "${MS_BASE_URL}"
       models:
-        default: 
+        default:
           - "kimi-k3"
           - "kimi-k2.7-code"
           - "kimi-k2.7-code-highspeed"
           - "kimi-k2.6"
-      fetch: false
+        fetch: false
       titleConvo: false
       titleModel: "kimi-k3"
-      summarize: false
-      summaryModel: "kimi-k3"
       dropParams: ["stop"]
       modelDisplayLabel: "Moonshot"
       iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/587297a974faf2e7e06364c2e8aae4f72a75acec/icons/moonshot.jpeg"
@@ -63,20 +54,17 @@ endpoints:
       apiKey: "user_provided"
       baseURL: "https://api.deepseek.com/beta"
       models:
-        default: 
+        default:
           - "deepseek-v4-pro"
           - "deepseek-reasoner"
-      fetch: false
+        fetch: false
       titleConvo: false
-      titleModel: "deepseek-chat"
-      summarize: false
-      summaryModel: "deepseek-chat"
+      titleModel: "current_model"
       dropParams: ["stop", "reasoning_effort", "reasoning"]
       addParams:
         thinking:
           type: "disabled"
       modelDisplayLabel: "DeepSeek"
-
 
     # Disabled temporarily: Together.ai
     # - name: "Together.ai"
@@ -85,11 +73,9 @@ endpoints:
     #   models:
     #     default:
     #       - "deepseek-ai/DeepSeek-R1"
-    #   fetch: false
+    #     fetch: false
     #   titleConvo: false
     #   titleModel: "deepseek-ai/DeepSeek-R1"
-    #   summarize: false
-    #   summaryModel: "deepseek-ai/DeepSeek-R1"
     #   dropParams: ["stop"]
     #   modelDisplayLabel: "Together.ai Deepseek R1"
 
@@ -102,11 +88,9 @@ endpoints:
     #       - "deepseek-ai/DeepSeek-R1-0528"
     #       - "deepseek-ai/DeepSeek-R1"
     #       - "deepseek-ai/DeepSeek-V3-0324"
-    #   fetch: false
+    #     fetch: false
     #   titleConvo: true
     #   titleModel: "deepseek-ai/DeepSeek-R1"
-    #   summarize: false
-    #   summaryModel: "deepseek-ai/DeepSeek-R1"
     #   dropParams: ["stop"]
     #   modelDisplayLabel: "Nebius Deepseek R1"
     #   iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/refs/heads/main/icons/nebius2.jpg"
@@ -115,7 +99,7 @@ endpoints:
       apiKey: "user_provided"
       baseURL: "https://api.x.ai/v1"
       models:
-        default: 
+        default:
           - "grok-4.6"
           - "grok-4.5"
           - "grok-4.3"
@@ -124,11 +108,9 @@ endpoints:
           - "grok-4-1-fast-non-reasoning"
           - "grok-4-1-fast-reasoning"
           - "grok-4-0709"
-      fetch: false
+        fetch: false
       titleConvo: true
       titleModel: "grok-4-1-fast-non-reasoning"
-      summarize: false
-      summaryModel: "grok-4-1-fast-non-reasoning"
       dropParams: ["stop"]
       modelDisplayLabel: "GROK"
       iconURL: "https://raw.githubusercontent.com/elinorgodzilla/librechat-config/refs/heads/main/icons/grok.jpg"
@@ -137,14 +119,12 @@ endpoints:
       apiKey: "user_provided"
       baseURL: "https://api.z.ai/api/paas/v4"
       models:
-        default: 
+        default:
           - "glm-5.3"
           - "glm-5.3-flash"
           - "glm-5.2"
-      fetch: false
+        fetch: false
       titleConvo: true
       titleModel: "glm-5.3"
-      summarize: false
-      summaryModel: "glm-5.3"
       dropParams: ["stop"]
       modelDisplayLabel: "GLM"
