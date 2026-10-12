@@ -11,6 +11,7 @@ endpoints:
       baseURL: "https://openrouter.ai/api/v1"
       models:
         default:
+          - "meta/muse-wonder"
           - "aion-labs/aion-3.5"
           - "mistralai/mistral-large-4-0"
           - "anthropic/claude-opus-5.5"
