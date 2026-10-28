@@ -131,3 +131,16 @@ endpoints:
       titleModel: "glm-5.3"
       dropParams: ["stop"]
       modelDisplayLabel: "GLM"
+
+    - name: "Surplus Intelligence"
+      apiKey: "user_provided"
+      baseURL: "https://api.surplusintelligence.ai/v1"
+      models:
+        default:
+          - "muse-wonder"
+        fetch: false
+      titleConvo: true
+      titleModel: "current_model"
+      dropParams: ["stop"]
+      modelDisplayLabel: "Surplus Intelligence"
+      iconURL: "https://www.surplusintelligence.ai/_web/surplus-logomark-128.png"
